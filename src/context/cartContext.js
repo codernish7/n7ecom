@@ -7,7 +7,7 @@ export const CartProviderFn=({children})=>{
 
     const localCart=()=>{
         let localCartData=localStorage.getItem('n7cart')
-        if(localCartData.length===0){
+        if(!localCartData || localCartData.length === 0){
             return []
         }
         else{
